@@ -1,0 +1,15 @@
+Presentación Estudiantes:
+https://forms.gle/njjPpAfS4qbFt4Zp8
+
+Repo GitHub:
+https://github.com/diegopolverelli/comision-74590-backend
+
+String de conexión a MongoDB Atlas
+MONGO_URL=mongodb+srv://coderhouse:codercoder2023@cluster0.wpxpupc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+Monitor de procesos:
+https://pm2.keymetrics.io/
+
+Playlist clase (fundamental...!!!):
+https://open.spotify.com/playlist/5GX2x4fbBnJKRO0qsg2Gm8?si=ec273740e52b473e
+
