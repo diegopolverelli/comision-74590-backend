@@ -1,0 +1,48 @@
+Presentación Estudiantes:
+https://forms.gle/njjPpAfS4qbFt4Zp8
+
+Repo GitHub:
+https://github.com/diegopolverelli/comision-74590-backend
+
+Repo Proyecto: 
+https://github.com/CoderContenidos/RecursosBackend-Adoptme
+
+
+
+String de conexión a MongoDB Atlas
+MONGO_URL=mongodb+srv://coderhouse:codercoder2023@cluster0.wpxpupc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+Playlist clase (fundamental...!!!):
+https://open.spotify.com/playlist/5GX2x4fbBnJKRO0qsg2Gm8?si=ec273740e52b473e
+
+
+node --env-file ./.env .\src\04-dotenv.js
+
+GEMINI CLI:
+https://github.com/google-gemini/gemini-cli
+
+NGINX:
+https://nginx.org/en/
+Start-Process -FilePath "C:\ruta\a\nginx.exe" -ArgumentList "-c C:\ruta\a\nginx.conf"
+Get-Process -Name nginx | Stop-Process -Force
+Get-Process -Name nginx
+
+
+PM2:
+https://pm2.keymetrics.io/
+
+
+Manejo de errores:
+npm i express-async-errors
+import "express-async-errors"
+require('express-async-errors')
+
+
+export const TIPOS_ERROR={
+    TIPO_DE_DATOS: 400, 
+    ARGUMENTOS_INVALIDOS: 400, 
+    AUTENTICACION: 401, 
+    AUTORIZACION: 403, 
+    NOT_FOUND: 404, 
+    INTERNAL_SERVER_ERROR: 500
+}
