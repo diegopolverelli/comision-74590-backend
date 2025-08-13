@@ -1,0 +1,40 @@
+# Si uso otro nombre de archivo .yaml:
+# docker-compose -f mi_proyecto.yml up -d
+
+# Para ejecutar en modo detach, agrego el flag -d
+# (detach significa que me devuelve el control de la consola;
+# si no lo especificamos, el log del servicio comienza a mostrar-
+# se en la CLI)
+
+# Para verificar el estado:
+# docker-compose ps
+
+# Para bajar el servicio:
+# docker-compose down
+
+# Para bajar un servicio específico:
+# docker-compose stop mi_servicio
+
+# Para eliminar contenedores:
+# docker-compose down
+
+services:
+  crud-users:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URL: "mongodb://db:27017/clase05"
+# En el backend, al conectar con mongoDB, hay que utilizar como nombre
+# de host, el indicado en el servicio de la DB. En este caso db. 
+# Quedaría así:
+# await mongoose.connect('mongodb://db:27017/clase35')
+  db:
+    image: mongo:5
+    restart: always
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - ./mongo:/data/db
+    
