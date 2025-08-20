@@ -1,0 +1,263 @@
+paths:
+  /api/users:
+    parameters: []
+    post:
+      summary: Registro de usuarios
+      parameters: []
+      responses:
+        '201':
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Type:
+              schema:
+                type: string
+              example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example: '160'
+            ETag:
+              schema:
+                type: string
+              example: W/"a0-5TjNPZZFgHC/sTZi1b2gf8NhAu4"
+            Date:
+              schema:
+                type: string
+              example: Thu, 29 May 2025 15:23:50 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+          description: Respuesta Registro de usuarios
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  usuario:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                        format: email
+                      password:
+                        type: string
+                        format: color
+              example:
+                message: Usuario creado
+                usuario:
+                  id: 60ab91445334918684501991
+                  first_name: Diego
+                  last_name: Ramirez
+                  email: dramirez@test.com
+                  password: '123'
+        '400':
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Type:
+              schema:
+                type: string
+              example: text/html; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example: '12'
+            ETag:
+              schema:
+                type: string
+              example: W/"c-odCjTlggASmK8Kx/NdlbRXXJ7U4"
+            Date:
+              schema:
+                type: string
+              example: Thu, 29 May 2025 15:26:35 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+          description: Respuesta Registro de usuarios - faltan datos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: color
+            example:
+              first_name: Diego
+              last_name: Ramirez
+              email: dramirez@test.com
+              password: '123'
+    get:
+      summary: Listado Usuarios
+      parameters: []
+      responses:
+        '200':
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Type:
+              schema:
+                type: string
+              example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example: '429'
+            ETag:
+              schema:
+                type: string
+              example: W/"1ad-1zfOuJVfdgmZK+XSn1W9dn5Hujk"
+            Date:
+              schema:
+                type: string
+              example: Thu, 29 May 2025 15:23:45 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+          description: Respuesta Listado Usuarios
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  usuarios:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        first_name:
+                          type: string
+                        last_name:
+                          type: string
+                        email:
+                          type: string
+                          format: email
+                        password:
+                          type: string
+              example:
+                message: Lista de usuarios
+                usuarios:
+                  - id: 60acc54545c8e82e0475f73a
+                    first_name: Juan
+                    last_name: Gomez
+                    email: jgomez@test.com
+                    password: xjkkakjsik
+                  - id: 60acc54545c8e82e0475100a
+                    first_name: Marina
+                    last_name: Estevez
+                    email: mestevez@test.com
+                    password: xjkkakjsiz
+                  - id: 60acc54545c8e82e0475200b
+                    first_name: Diego
+                    last_name: Gonzalez
+                    email: dgonzalez@test.com
+                    password: xjkkakaaaa
+  /api/users/60acc54545c8e82e0475100a:
+    parameters: []
+    get:
+      summary: Lista un Usuario, por id
+      parameters: []
+      responses:
+        '200':
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example: Express
+            Content-Type:
+              schema:
+                type: string
+              example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example: '215'
+            ETag:
+              schema:
+                type: string
+              example: W/"d7-Ho0g9zWpyun4ISoBgMrPsbiwEbI"
+            Date:
+              schema:
+                type: string
+              example: Thu, 29 May 2025 15:25:57 GMT
+            Connection:
+              schema:
+                type: string
+              example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example: timeout=5
+          description: Respuesta Lista un Usuario, por id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    format: style
+                  usuario:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                        format: email
+                      password:
+                        type: string
+              example:
+                message: 'Lista de usuarios, ingresando param: 60acc54545c8e82e0475100a'
+                usuario:
+                  id: 60acc54545c8e82e0475100a
+                  first_name: Marina
+                  last_name: Estevez
+                  email: mestevez@test.com
+                  password: xjkkakjsiz
